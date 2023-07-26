@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             ModeratorSeeder::class,
             NotulensiSeeder::class,
             AbsensiSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }
