@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AutentikasiController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::redirect('/', '/auth');
+
+// Autentikasi
+Route::resource('/auth', AutentikasiController::class);
+Route::post('/register', [AutentikasiController::class, 'register'])->name('register');
+Route::get('/logout-page', [AutentikasiController::class, 'logoutPage'])->name('logout-page');
+
+Route::group(['middleware' => 'login'], function () {
+    Route::resource('/dashboard', DashboardController::class);
+    Route::get('/logout', [AutentikasiController::class, 'logout'])->name('logout');
 });
