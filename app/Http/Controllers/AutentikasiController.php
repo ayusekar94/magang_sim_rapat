@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use App\Models\User;
+use App\Models\Karyawan;
 use Illuminate\Support\Facades\Auth;
 
 class AutentikasiController extends Controller
@@ -27,20 +27,23 @@ class AutentikasiController extends Controller
     // Auth
     public function store(Request $request){
         $validatedData=$request->validate([
-            'email' => 'required',
+            'NIP' => 'required',
             'password' => 'required'
         ]);
 
         //jika username ada
-        $user = DB::table('users')->where('email', $request->email)->first();
+        $user = DB::table('karyawans')->where('NIP', $request->NIP)->first();
 
         //jika password benar
         if($user){
             if(Hash::check($request->password,$user->password)){
                 session([
                     'isLogin' => true,
-                    'email' => $user->email,
-                    'nama' => $user->name,
+                    'NIP' => $user->NIP,
+                    'nama' => $user->nama,
+                    'divisi' => $user->divisi,
+                    'jabatan' => $user->jabatan,
+                    'departemen' => $user->departemen
                     ]);
                 // return redirect('/'.$request->role);
                 return redirect('/dashboard');
@@ -69,13 +72,16 @@ class AutentikasiController extends Controller
     public function register(Request $request){
         // dd($request);
         $validatedData=$request->validate([
-            'email' => 'required',
-            'name' => 'required|min:5',
+            'NIP' => 'required',
+            'nama' => 'required|min:5',
             'password' => 'required|min:5|confirmed',
+            'divisi' => 'required',
+            'jabatan' => 'required',
+            'departemen' => 'required'
         ]);
         $validatedData['password']=bcrypt($validatedData['password']);
 
-        User::create($validatedData); //untuk menyimpan data
+        Karyawan::create($validatedData); //untuk menyimpan data
 
         // toast('Registration has been successful','success');
         return redirect('/auth')->with('registrasi_success','Selamat Anda berhasil melakukan registrasi! Sekarang Anda bisa login menggunakan akun Anda');

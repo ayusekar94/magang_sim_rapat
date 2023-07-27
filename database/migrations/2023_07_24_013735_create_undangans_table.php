@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('email_penerima');
             $table->string('status_undangan');
+            $table->date('waktu_pengiriman');
             $table->timestamps();
 
             # Relasi

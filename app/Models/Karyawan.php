@@ -5,21 +5,24 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Peserta extends Model
+class Karyawan extends Model
 {
     use HasFactory;
 
-    protected $table = 'pesertas';
-
     protected $fillable = [
-        'nama_peserta',
+        'NIP',
+        'nama',
+        'password',
         'divisi',
         'jabatan',
-        'rapat_id'
+        'departemen'
     ];
 
+    protected $primaryKey = 'NIP';
+
+    # Karyawan has many kegiatans
     public function rapat()
     {
-        return $this->belongsTo(Rapat::class, 'rapat_id');
+        return $this->hasMany(Kegiatan::class);
     }
 }
