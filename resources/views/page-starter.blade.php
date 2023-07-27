@@ -123,9 +123,9 @@
                             <li class="menu-title" data-key="t-menu">Menu</li>
 
                             <li>
-                                <a href="index.html">
+                                <a href="/undangan">
                                     <i class="bx bx-tachometer icon nav-icon"></i>
-                                    <span class="menu-item" data-key="t-dashboards">Kegiatan</span>
+                                    <span class="menu-item" data-key="t-dashboards">Undangan</span>
                                 </a>
                             </li>
 
@@ -169,10 +169,10 @@
                                 <div class="collapse navbar-collapse" id="topnav-menu-content">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="/kegiatan" id="topnav-dashboard" role="button"
+                                            <a class="nav-link dropdown-toggle arrow-none" href="/undangan" id="topnav-dashboard" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class='bx bx-tachometer'></i>
-                                                <span data-key="t-dashboards">Kegiatan</span>
+                                                <span data-key="t-dashboards">Undangan</span>
                                             </a>
                                         </li>
         
