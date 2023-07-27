@@ -8,7 +8,7 @@
         <meta charset="utf-8" />
         <title>{{ $judul }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Premium Multipurpose Admin & rapat Template" name="description" />
         <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -123,12 +123,39 @@
                             <li class="menu-title" data-key="t-menu">Menu</li>
 
                             <li>
-                                <a href="index.html">
+                                <a href="/dashbord">
                                     <i class="bx bx-tachometer icon nav-icon"></i>
-                                    <span class="menu-item" data-key="t-dashboards">Kegiatan</span>
+                                    <span class="menu-item" data-key="t-dashboards">Dashbord</span>
                                 </a>
                             </li>
-
+                            <li class="menu-title" data-key="t-pages">Applications</li>
+                            <li>
+                                <a href="/rapat">
+                                    <i class="bx bx-file icon nav-icon"></i>
+                                    <span class="menu-item" data-key="t-rapat">Rapat</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <i class="bx bx-user-circle icon nav-icon"></i>
+                                    <span class="menu-item" data-key="t-utility">Account</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="/absensi" data-key="t-starter-page">Absensi</a></li>
+                                    <li><a href="/peserta" data-key="t-maintenance">Peserta</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <i class="bx bx-receipt icon nav-icon"></i>
+                                    <span class="menu-item" data-key="t-Invoice">Invoice</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="/undangan" data-key="t-undangan">Undangan</a></li>
+                                    <li><a href="/materi" data-key="t-materi">Materi</a></li>
+                                    <li><a href="/notulen" data-key="t-notulen">Notulensi</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <!-- Sidebar -->
@@ -169,13 +196,41 @@
                                 <div class="collapse navbar-collapse" id="topnav-menu-content">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="/kegiatan" id="topnav-dashboard" role="button"
+                                            <a class="nav-link dropdown-toggle arrow-none" href="/dashboard" id="topnav-dashboard" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class='bx bx-tachometer'></i>
-                                                <span data-key="t-dashboards">Kegiatan</span>
+                                                <span data-key="t-dashboards">Dashbord</span>
                                             </a>
                                         </li>
-        
+                                        <li class="nav-item">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="/rapat" id="topnav-dashboard" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class='bx bx-file icon nav-icon'></i>
+                                                <span data-key="t-rapats">Rapat</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button">
+                                                <i class='bx bx-user-circle icon nav-icon'></i>
+                                                <span data-key="t-account">Account</span> <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-pages">
+                                                <a href="/absensi" class="dropdown-item" data-key="t-Absensi">Absensi</a>
+                                                <a href="/peserta" class="dropdown-item" data-key="t-peserta">Peserta</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button">
+                                                <i class='bx bx-receipt icon nav-icon'></i>
+                                                <span data-key="t-utility">Utility</span> <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-pages">
+    
+                                                <a href="/undangan" class="dropdown-item" data-key="t-undangan">Undangan</a>
+                                                <a href="/materi" class="dropdown-item" data-key="t-materi">Materi</a>
+                                                <a href="/notulen" class="dropdown-item" data-key="t-notulen">Notulensi</a>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </nav>
