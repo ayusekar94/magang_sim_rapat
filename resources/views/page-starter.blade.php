@@ -19,6 +19,8 @@
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+        <!-- gridjs css -->
+        <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
 
     </head>
 
@@ -199,14 +201,18 @@
                                             <a class="nav-link dropdown-toggle arrow-none" href="/dashboard" id="topnav-dashboard" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class='bx bx-tachometer'></i>
+<<<<<<< HEAD
                                                 <span data-key="t-dashboards">Dashbord</span>
+=======
+                                                <span data-key="t-dashboards">Dashboard</span>
+>>>>>>> 33bd1ac96d4da049063d3a660cabf11fd8db8900
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="/rapat" id="topnav-dashboard" role="button"
+                                            <a class="nav-link dropdown-toggle arrow-none" href="rapat" id="topnav-rapat" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class='bx bx-file icon nav-icon'></i>
-                                                <span data-key="t-rapats">Rapat</span>
+                                                <i class='bx bx-tachometer'></i>
+                                                <span data-key="t-rapat">Rapat</span>
                                             </a>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -451,6 +457,9 @@
         <script src="assets/libs/metismenujs/metismenujs.min.js"></script>
         <script src="assets/libs/simplebar/simplebar.min.js"></script>
         <script src="assets/libs/feather-icons/feather.min.js"></script>
+        <!-- gridjs js -->
+        <script src="assets/libs/gridjs/gridjs.umd.js"></script>
+        <script src="assets/js/rapat/rapat.init.js"></script>
 
         <script src="assets/js/app.js"></script>
 

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AutentikasiController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UndanganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,9 @@ Route::get('/logout-page', [AutentikasiController::class, 'logoutPage'])->name('
 Route::group(['middleware' => 'login'], function () {
     Route::resource('/dashboard', DashboardController::class);
     Route::get('/logout', [AutentikasiController::class, 'logout'])->name('logout');
+<<<<<<< HEAD
     Route::get('/profile', [AutentikasiController::class, 'uindex']);
+=======
+    Route::get('/send_mail', [UndanganController::class, 'sendEmail'])->name('send_mail');
+>>>>>>> 33bd1ac96d4da049063d3a660cabf11fd8db8900
 });
