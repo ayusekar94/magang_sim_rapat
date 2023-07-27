@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('absensis', function (Blueprint $table) {
+        Schema::create('karyawan_rapat', function (Blueprint $table) {
             $table->id();
             $table->string('kehadiran');
             $table->string('keterangan');
@@ -20,8 +20,8 @@ return new class extends Migration
             # Relasi
             $table->unsignedBigInteger('rapat_id');
             $table->foreign('rapat_id')->references('id')->on('rapats')->onDelete('cascade');
-            $table->unsignedBigInteger('peserta_id');
-            $table->foreign('peserta_id')->references('id')->on('pesertas')->onDelete('cascade');
+            $table->unsignedBigInteger('karyawan_nip');
+            $table->foreign('karyawan_nip')->references('NIP')->on('karyawans')->onDelete('cascade');
         });
     }
 

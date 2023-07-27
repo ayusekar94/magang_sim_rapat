@@ -21,6 +21,10 @@ return new class extends Migration
             $table->string('ruangan');
             $table->string('status');
             $table->timestamps();
+
+            # Relasi
+            $table->unsignedBigInteger('moderator_nip');
+            $table->foreign('moderator_nip')->references('NIP')->on('karyawans')->onDelete('cascade');
         });
     }
 

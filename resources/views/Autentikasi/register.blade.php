@@ -47,9 +47,9 @@
                                     <form action="/register" method="POST">@csrf
         
                                         <div class="mb-3">
-                                            <label class="form-label" for="useremail">email</label>
-                                            <input type="number" class="form-control" name="email" placeholder="Enter Nomor Identitas Pegawai">        
-                                            @error('email')
+                                            <label class="form-label" for="useremail">NIP</label>
+                                            <input type="number" class="form-control" name="NIP" placeholder="Enter Nomor Identitas Pegawai">        
+                                            @error('NIP')
                                             <code>
                                                 {{ $message }}
                                             </code>
@@ -58,12 +58,54 @@
                 
                                         <div class="mb-3">
                                             <label class="form-label" for="username">Nama Lengkap</label>
-                                            <input type="text" class="form-control" name="name" placeholder="Enter Full Name">
-                                            @error('name')
+                                            <input type="text" class="form-control" name="nama" placeholder="Enter Full Name">
+                                            @error('nama')
                                             <code>
                                                 {{ $message }}
                                             </code>
                                             @enderror
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label" for="username">Jabatan</label>
+                                            <input type="text" class="form-control" name="jabatan" placeholder="Enter Jabatan">
+                                            @error('nama')
+                                            <code>
+                                                {{ $message }}
+                                            </code>
+                                            @enderror
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="col-md-4 col-form-label">Departemen</label>
+                                            <div class="col-md-12">
+                                                <select class="form-select" name="departemen">
+                                                    <option value="Security & Tata Kelola" selected>Security & Tata Kelola</option>
+                                                </select>
+                                                @error('divisi')
+                                                <code>
+                                                    {{ $message }}
+                                                </code>
+                                                @enderror
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="col-md-2 col-form-label">Divisi</label>
+                                            <div class="col-md-12">
+                                                <select class="form-select" name="divisi">
+                                                    <option value="Divisi Kapal Perang" selected>Divisi Kapal Perang</option>
+                                                    <option value="Divisi Teknologi Informasi">Divisi Teknologi Informasi</option>
+                                                    <option value="Divisi Kapal Niaga">Divisi Kapal Niaga</option>
+                                                    <option value="Divisi General Engineering">Divisi General Engineering</option>
+                                                    <option value="Divisi Perbaikan dan Pemeliharaan">Divisi Perbaikan dan Pemeliharaan</option>
+                                                </select>
+                                                @error('divisi')
+                                                <code>
+                                                    {{ $message }}
+                                                </code>
+                                                @enderror
+                                            </div>
                                         </div>
                 
                                         <div class="mb-3">

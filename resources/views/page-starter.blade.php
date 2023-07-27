@@ -126,6 +126,9 @@
                                 <a href="/dashbord">
                                     <i class="bx bx-tachometer icon nav-icon"></i>
                                     <span class="menu-item" data-key="t-dashboards">Dashbord</span>
+                                <a href="/undangan">
+                                    <i class="bx bx-tachometer icon nav-icon"></i>
+                                    <span class="menu-item" data-key="t-dashboards">Undangan</span>
                                 </a>
                             </li>
                             <li class="menu-title" data-key="t-pages">Applications</li>
@@ -196,10 +199,17 @@
                                 <div class="collapse navbar-collapse" id="topnav-menu-content">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
+<<<<<<< HEAD
                                             <a class="nav-link dropdown-toggle arrow-none" href="/dashboard" id="topnav-dashboard" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class='bx bx-tachometer'></i>
                                                 <span data-key="t-dashboards">Dashbord</span>
+=======
+                                            <a class="nav-link dropdown-toggle arrow-none" href="/undangan" id="topnav-dashboard" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class='bx bx-tachometer'></i>
+                                                <span data-key="t-dashboards">Undangan</span>
+>>>>>>> 3b05c017c475ee6113f04e60bc1fd69eec10f61f
                                             </a>
                                         </li>
                                         <li class="nav-item">

@@ -21,6 +21,7 @@ class RapatSeeder extends Seeder
             'deskripsi' => 'Rapat pembahasan proyek X dengan tim pengembang.',
             'ruangan' => 'Ruangan A',
             'status' => 'terjadwal',
+            'moderator_nip' => '182930485766',
         ]);
 
         Rapat::create([
@@ -31,6 +32,7 @@ class RapatSeeder extends Seeder
             'deskripsi' => 'Rapat koordinasi departemen Y.',
             'ruangan' => 'Ruangan B',
             'status' => 'terjadwal',
+            'moderator_nip' => '182930485766',
         ]);
     }
 }
