@@ -29,12 +29,12 @@ class KaryawanSeeder extends Seeder
             ],
             [
             'NIP' => '182930485766',
-            'Nama' => 'Ahmad Abdullah',
+            'Nama' => 'Ananda Ayu Sekar',
             'password' => bcrypt('abc123'),
             'divisi' => 'Sumber Daya Manusia',
             'jabatan' => 'Manager',
             'departemen' => 'SDM',
-            'email' => 'ahmad.abdullah@example.com',
+            'email' => 'ananda@gmail.com',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
             ]            
