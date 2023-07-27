@@ -126,9 +126,6 @@
                                 <a href="/dashbord">
                                     <i class="bx bx-tachometer icon nav-icon"></i>
                                     <span class="menu-item" data-key="t-dashboards">Dashbord</span>
-                                <a href="/undangan">
-                                    <i class="bx bx-tachometer icon nav-icon"></i>
-                                    <span class="menu-item" data-key="t-dashboards">Undangan</span>
                                 </a>
                             </li>
                             <li class="menu-title" data-key="t-pages">Applications</li>
@@ -145,7 +142,7 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="/absensi" data-key="t-starter-page">Absensi</a></li>
-                                    <li><a href="/peserta" data-key="t-maintenance">Peserta</a></li>
+                                    <li><a href="/karyawan" data-key="t-karyawan">Karyawan</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -199,17 +196,10 @@
                                 <div class="collapse navbar-collapse" id="topnav-menu-content">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-<<<<<<< HEAD
                                             <a class="nav-link dropdown-toggle arrow-none" href="/dashboard" id="topnav-dashboard" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class='bx bx-tachometer'></i>
                                                 <span data-key="t-dashboards">Dashbord</span>
-=======
-                                            <a class="nav-link dropdown-toggle arrow-none" href="/undangan" id="topnav-dashboard" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class='bx bx-tachometer'></i>
-                                                <span data-key="t-dashboards">Undangan</span>
->>>>>>> 3b05c017c475ee6113f04e60bc1fd69eec10f61f
                                             </a>
                                         </li>
                                         <li class="nav-item">
@@ -226,7 +216,7 @@
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="topnav-pages">
                                                 <a href="/absensi" class="dropdown-item" data-key="t-Absensi">Absensi</a>
-                                                <a href="/peserta" class="dropdown-item" data-key="t-peserta">Peserta</a>
+                                                <a href="/karyawan" class="dropdown-item" data-key="t-karyawan">Karyawan</a>
                                             </div>
                                         </li>
                                         <li class="nav-item dropdown">

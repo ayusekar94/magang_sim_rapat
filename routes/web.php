@@ -25,4 +25,5 @@ Route::get('/logout-page', [AutentikasiController::class, 'logoutPage'])->name('
 Route::group(['middleware' => 'login'], function () {
     Route::resource('/dashboard', DashboardController::class);
     Route::get('/logout', [AutentikasiController::class, 'logout'])->name('logout');
+    Route::get('/profile', [AutentikasiController::class, 'uindex']);
 });
