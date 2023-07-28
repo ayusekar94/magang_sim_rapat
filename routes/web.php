@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AutentikasiController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UndanganController;
+use App\Http\Controllers\RapatController;
+use App\Http\Controllers\AbsenController;
+use App\Http\Controllers\MateriController;
+use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\NotulensiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +30,12 @@ Route::get('/logout-page', [AutentikasiController::class, 'logoutPage'])->name('
 
 Route::group(['middleware' => 'login'], function () {
     Route::resource('/dashboard', DashboardController::class);
+    Route::resource('/rapat', RapatController::class);
+    Route::resource('/absensi', AbsenController::class);
+    Route::resource('/karyawan', KaryawanController::class);
+    Route::resource('/materi', MateriController::class);
+    Route::resource('/notulensi', NotulensiController::class);
     Route::get('/logout', [AutentikasiController::class, 'logout'])->name('logout');
-<<<<<<< HEAD
     Route::get('/profile', [AutentikasiController::class, 'uindex']);
-=======
     Route::get('/send_mail', [UndanganController::class, 'sendEmail'])->name('send_mail');
->>>>>>> 33bd1ac96d4da049063d3a660cabf11fd8db8900
 });
