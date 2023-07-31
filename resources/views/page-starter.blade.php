@@ -454,6 +454,8 @@
         <!-- gridjs js -->
         <script src="assets/libs/gridjs/gridjs.umd.js"></script>
         {{-- <script src="assets/js/rapat/rapat.init.js"></script> --}}
+        
+        <script src="assets/js/pages/form-wizard.init.js"></script>
 
         <script src="assets/js/app.js"></script>
 

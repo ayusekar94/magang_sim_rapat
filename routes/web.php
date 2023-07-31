@@ -31,6 +31,7 @@ Route::get('/logout-page', [AutentikasiController::class, 'logoutPage'])->name('
 Route::group(['middleware' => 'login'], function () {
     Route::resource('/dashboard', DashboardController::class);
     Route::resource('/rapat', RapatController::class);
+    Route::resource('/undangan', UndanganController::class);
     Route::resource('/absensi', AbsenController::class);
     Route::resource('/karyawan', KaryawanController::class);
     Route::resource('/materi', MateriController::class);
