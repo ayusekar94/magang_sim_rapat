@@ -456,6 +456,9 @@
         <!-- gridjs js -->
         <script src="assets/libs/gridjs/gridjs.umd.js"></script>
         <script src="assets/js/rapat/rapat.init.js"></script>
+        <script src="assets/js/karyawan/karyawan.init.js"></script>
+        <script src="assets/js/materi/materi.init.js"></script>
+        <script src="assets/js/notulensi/notulensi.init.js"></script>
 
         <script src="assets/js/app.js"></script>
 

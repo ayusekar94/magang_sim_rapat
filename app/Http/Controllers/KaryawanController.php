@@ -15,6 +15,7 @@ class KaryawanController extends Controller
     public function index()
     {
         return view('Karyawan.karyawan',[
+            'karyawan' => Karyawan::get(),
             'judul' => 'Karyawan'
         ]);
     }
