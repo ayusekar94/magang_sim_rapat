@@ -5,16 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Moderator extends Model
+class Undangan extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'nama_moderator',
-        'rapat_id'
-    ];
+    protected $table = 'undangans';
 
-    protected $table = 'moderators';
+    protected $fillable = [
+        'email_penerima',
+        'status_undangan',
+        'waktu_pengiriman',
+        'rapat_id',
+    ];
 
     public function rapat()
     {

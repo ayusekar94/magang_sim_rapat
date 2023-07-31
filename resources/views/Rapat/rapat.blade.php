@@ -24,6 +24,9 @@
                                 <div class="card">
                                     <div class="card-header">
                                         <h4 class="card-title mb-0">Table Rapat</h4>
+                                        <button type="button" class="btn btn-primary w-sm ms-auto float-end" data-bs-toggle="modal" data-bs-target="#modalAdd">
+                                            <i class="fas fa-folder-plus text-white-50"></i> Tambah </a>
+                                        </button>
                                     </div><!-- end card header -->
                                     <div class="card-body">
                                         <div id="table-gridjs"></div>
@@ -36,4 +39,6 @@
                         </div>
                         <!-- end row -->
 <!-- end row -->
+
+@include('Rapat.modal_add')
 @endsection
