@@ -1,5 +1,5 @@
 new gridjs.Grid({
-	columns: ["Name", "Email", "Position", "Company", "Country"],
+	columns: ["NIP","Name", "Email", "Jabatan", "Divisi", "Action"],
 	pagination: {
 		limit: 5
 	},

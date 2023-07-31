@@ -128,9 +128,6 @@
                                 <a href="/dashbord">
                                     <i class="bx bx-tachometer icon nav-icon"></i>
                                     <span class="menu-item" data-key="t-dashboards">Dashbord</span>
-                                <a href="/undangan">
-                                    <i class="bx bx-tachometer icon nav-icon"></i>
-                                    <span class="menu-item" data-key="t-dashboards">Undangan</span>
                                 </a>
                             </li>
                             <li class="menu-title" data-key="t-pages">Applications</li>
@@ -147,7 +144,7 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="/absensi" data-key="t-starter-page">Absensi</a></li>
-                                    <li><a href="/peserta" data-key="t-maintenance">Peserta</a></li>
+                                    <li><a href="/karyawan" data-key="t-karyawan">Karyawan</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -204,13 +201,13 @@
                                             <a class="nav-link dropdown-toggle arrow-none" href="/dashboard" id="topnav-dashboard" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class='bx bx-tachometer'></i>
-                                                <span data-key="t-dashboards">Dashboard</span>
+                                                <span data-key="t-dashboards">Dashbord</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link dropdown-toggle arrow-none" href="/rapat" id="topnav-rapat" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class='bx bx-tachometer'></i>
+                                                <i class='bx bx-file icon nav-icon'></i>
                                                 <span data-key="t-rapat">Rapat</span>
                                             </a>
                                         </li>
@@ -221,7 +218,7 @@
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="topnav-pages">
                                                 <a href="/absensi" class="dropdown-item" data-key="t-Absensi">Absensi</a>
-                                                <a href="/peserta" class="dropdown-item" data-key="t-peserta">Peserta</a>
+                                                <a href="/karyawan" class="dropdown-item" data-key="t-karyawan">Karyawan</a>
                                             </div>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -233,7 +230,7 @@
     
                                                 <a href="/undangan" class="dropdown-item" data-key="t-undangan">Undangan</a>
                                                 <a href="/materi" class="dropdown-item" data-key="t-materi">Materi</a>
-                                                <a href="/notulen" class="dropdown-item" data-key="t-notulen">Notulensi</a>
+                                                <a href="/notulensi" class="dropdown-item" data-key="t-notulen">Notulensi</a>
                                             </div>
                                         </li>
                                     </ul>
