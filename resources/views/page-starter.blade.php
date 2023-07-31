@@ -445,7 +445,8 @@
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        @include('Karyawan.modal_control')
         <!-- JAVASCRIPT -->
         <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="assets/libs/metismenujs/metismenujs.min.js"></script>
@@ -453,17 +454,12 @@
         <script src="assets/libs/feather-icons/feather.min.js"></script>
         <!-- gridjs js -->
         <script src="assets/libs/gridjs/gridjs.umd.js"></script>
-<<<<<<< HEAD
-        <script src="assets/js/rapat/rapat.init.js"></script>
+        {{-- <script src="assets/js/rapat/rapat.init.js"></script> --}}
         <script src="assets/js/karyawan/karyawan.init.js"></script>
         <script src="assets/js/materi/materi.init.js"></script>
         <script src="assets/js/notulensi/notulensi.init.js"></script>
-=======
-        {{-- <script src="assets/js/rapat/rapat.init.js"></script> --}}
-        
-        <script src="assets/js/pages/form-wizard.init.js"></script>
->>>>>>> d5bbe261288e10dc866548f98327c643537bb3fd
 
+        <script src="assets/js/pages/form-wizard.init.js"></script>
         <script src="assets/js/app.js"></script>
 
     </body>

@@ -70,12 +70,13 @@
                                     </td>
                                     
                                     <td>
-                                        <form action="/karyawan/{{ $item->id }}" method="POST" class="d-inline"> @method('DELETE') @csrf {{-- Update  --}}
-                                            <button type="button" value="{{ $item->id }}" class="btn btn-primary editbtn btn-sm open_modal" data-bs-toggle="modal" data-bs-target="#modalEdit" data-nip={{ $item->NIP }} data-name="{{ $item->nama }}" data-email="{{ $item->email }}" data-jabatan="{{ $item->Jabatan }}" data-divisi="{{ $item->divisi }}" data-gambar="{{ $item->image }}">
+                                        <form action="/karyawan/{{ $item->NIP }}" method="POST" class="d-inline"> 
+                                            @method('DELETE') 
+                                            @csrf 
+                                            {{-- Update  --}}
+                                            <button type="button" value="{{ $item->nip }}" class="btn btn-primary editbtn btn-sm open_modal" data-bs-toggle="modal" data-bs-target="#modalEdit" data-nip={{ $item->NIP }} data-nama="{{ $item->nama }}" data-email="{{ $item->email }}" data-jabatan="{{ $item->jabatan }}" data-divisi="{{ $item->divisi }}">
                                               <i class="fas fa-edit"></i>
                                             </button>
-                                            {{-- <a href="category/{{ $item->id }}/edit" class="badge bg-info" data-bs-toggle="modal" data-bs-target="#editModal"> <i class="fas fa-edit"></i>
-                                            </a> --}} {{-- Delete  --}}
                                             <button class="btn btn-danger btn-sm" onclick="return confirm('apakah anda yakin ?')">
                                               <i class="fas fa-trash-alt"></i>
                                             </button>

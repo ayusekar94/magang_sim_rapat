@@ -91,20 +91,27 @@ class KaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $NIP)
     {
-        $karyawan = Karyawan::where('id', session('NIP'))->first();
-    	$karyawan->NIP = $request->NIP;
-        $karyawan->nama = $request->nama;
-        $karyawan->email = $request->email;
-    	$karyawan->password = $request->password;
-    	$karyawan->divisi = $request->divisi;
-    	$karyawan->jabatan = $request->jabatan;
-        $karyawan->departemen = $request->departemen;
-    	
-    	$karyawan->update();
+        $validatedData=$request->validate([
+            'nip-edit' => 'required',
+            'nama-edit' => 'required',
+            'email-edit' => 'required',
+            'jabatan-edit' => 'required',
+            'divisi-edit' => 'required',
+        ]);
 
-        return redirect('/karyawan');
+        $karyawans= Karyawan::find($NIP);
+
+        $karyawans->Nip= $validatedData['nip-edit'];
+        $karyawans->nama= $validatedData['nama-edit'];
+        $karyawans->email= $validatedData['email-edit'];
+        $karyawans->jabatan= $validatedData['jabatan-edit'];
+        $karyawans->divisi= $validatedData['divisi-edit'];
+        $karyawans->save();
+    	
+        // toast('Your data has been saved!','success');
+    	return redirect('/karyawan');
     }
 
     /**
@@ -113,9 +120,9 @@ class KaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($NIP)
     {
-        Karyawan::destroy($id);
+        Karyawan::destroy($NIP);
 
     	return redirect('/karyawan'); 
     }

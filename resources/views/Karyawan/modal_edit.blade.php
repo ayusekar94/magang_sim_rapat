@@ -23,41 +23,59 @@
                         </ul>
                         <div class="wizard-tab">
                             <div class="text-center mb-4">
-                                <h5>Customer Information</h5>
+                                <h5>Tambah Data Karyawan</h5>
                                 <p class="card-title-desc">Fill all information below</p>
                             </div>
                             <div>
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <div class="mb-3">
-                                            <label for="customerinfo-name-input" class="form-label">Customer Name :</label>
-                                            <input type="text" class="form-control" placeholder="Enter Name" id="customerinfo-name-input">
+                                            <label for="customerinfo-phone-input" class="form-label">NIP :</label>
+                                            <input type="text" name="nip-edit" id="nip-edit" class="form-control" /> @error('NIP') <code>
+                                                {{ $message }}
+                                            </code> @enderror
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="mb-3">
+                                            <label for="customerinfo-name-input" class="form-label">Karyawan Name :</label>
+                                            <input type="text" name="nama-edit" id="nama-edit" class="form-control" /> @error('nama') <code>
+                                                {{ $message }}
+                                            </code> @enderror
                                         </div>
                                         
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="mb-3">
                                             <label for="customerinfo-email-input" class="form-label">Email :</label>
-                                            <input type="email" class="form-control" placeholder="Enter Email" id="customerinfo-email-input">
+                                            <input type="email" name="email-edit" id="email-edit" class="form-control" /> @error('email') <code>
+                                                {{ $message }}
+                                            </code> @enderror
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
-                                        
                                         <div class="mb-3">
-                                            <label for="customerinfo-phone-input" class="form-label">Phone :</label>
-                                            <input type="text" class="form-control" placeholder="Enter Phone" id="customerinfo-phone-input">
+                                            <label for="customerinfo-name-input" class="form-label">Jabatan :</label>
+                                            <input type="text" name="jabatan-edit" id="jabatan-edit" class="form-control" /> @error('nama') <code>
+                                                {{ $message }}
+                                            </code> @enderror
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="mb-3">
+                                            <label for="customerinfo-divisi-input" class="form-label">Divisi :</label>
+                                            <input type="divisi" name="divisi-edit" id="divisi-edit" class="form-control" /> @error('divisi') <code>
+                                                {{ $message }}
+                                            </code> @enderror
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="customerinfo-address-input" class="form-label">Address :</label>
-                                    <textarea class="form-control" placeholder="Enter Address" id="customerinfo-address-input" rows="2"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex align-items-start gap-3 mt-4">
-                            <button type="button" class="btn btn-primary w-sm ms-auto" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary" value="Save">
                         </div>
                     </div>
                 </form>
