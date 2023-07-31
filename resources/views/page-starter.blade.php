@@ -230,7 +230,7 @@
     
                                                 <a href="/undangan" class="dropdown-item" data-key="t-undangan">Undangan</a>
                                                 <a href="/materi" class="dropdown-item" data-key="t-materi">Materi</a>
-                                                <a href="/notulen" class="dropdown-item" data-key="t-notulen">Notulensi</a>
+                                                <a href="/notulensi" class="dropdown-item" data-key="t-notulen">Notulensi</a>
                                             </div>
                                         </li>
                                     </ul>
