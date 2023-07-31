@@ -8,7 +8,7 @@ class DashboardController extends Controller
 {
     // Buka Halaman Dashboard
     public function index(){
-        return view('Rapat.rapat',[
+        return view('Dashboard.dashboard',[
             'judul' => 'Dashboard'
         ]);
     }

@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             MateriSeeder::class,
             NotulensiSeeder::class,
             AbsensiSeeder::class,
+            UndanganSeeder::class,
         ]);
     }
 }

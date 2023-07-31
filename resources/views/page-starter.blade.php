@@ -21,7 +21,7 @@
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <!-- gridjs css -->
         <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     </head>
 
     <body data-layout="horizontal" data-topbar="dark">
@@ -208,7 +208,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="rapat" id="topnav-rapat" role="button"
+                                            <a class="nav-link dropdown-toggle arrow-none" href="/rapat" id="topnav-rapat" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class='bx bx-tachometer'></i>
                                                 <span data-key="t-rapat">Rapat</span>
@@ -448,8 +448,6 @@
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        {{-- @include('pages.modal-control') --}}
 
         <!-- JAVASCRIPT -->
         <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -458,7 +456,7 @@
         <script src="assets/libs/feather-icons/feather.min.js"></script>
         <!-- gridjs js -->
         <script src="assets/libs/gridjs/gridjs.umd.js"></script>
-        <script src="assets/js/rapat/rapat.init.js"></script>
+        {{-- <script src="assets/js/rapat/rapat.init.js"></script> --}}
 
         <script src="assets/js/app.js"></script>
 
