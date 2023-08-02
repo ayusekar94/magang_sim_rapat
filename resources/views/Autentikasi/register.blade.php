@@ -77,6 +77,16 @@
                                         </div>
 
                                         <div class="mb-3">
+                                            <label class="form-label" for="username">Email</label>
+                                            <input type="text" class="form-control" name="email" placeholder="Enter email">
+                                            @error('email')
+                                            <code>
+                                                {{ $message }}
+                                            </code>
+                                            @enderror
+                                        </div>
+
+                                        <div class="mb-3">
                                             <label class="col-md-4 col-form-label">Departemen</label>
                                             <div class="col-md-12">
                                                 <select class="form-select" name="departemen">

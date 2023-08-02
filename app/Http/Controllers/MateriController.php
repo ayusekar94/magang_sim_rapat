@@ -17,6 +17,7 @@ class MateriController extends Controller
     public function index()
     {
         return view('Materi.materi',[
+            'materi' => Materi::get(),
             'judul' => 'Materi'
         ]);
     }
