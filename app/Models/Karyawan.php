@@ -15,6 +15,7 @@ class Karyawan extends Model
         'password',
         'divisi',
         'jabatan',
+        'email',
         'departemen'
     ];
 

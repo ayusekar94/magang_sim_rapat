@@ -75,6 +75,7 @@ class AutentikasiController extends Controller
             'NIP' => 'required',
             'nama' => 'required|min:5',
             'password' => 'required|min:5|confirmed',
+            'email' => 'required|email',
             'divisi' => 'required',
             'jabatan' => 'required',
             'departemen' => 'required'
