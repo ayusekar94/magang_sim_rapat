@@ -37,6 +37,7 @@ Route::group(['middleware' => 'login'], function () {
     Route::resource('/materi', MateriController::class);
     Route::resource('/notulensi', NotulensiController::class);
     Route::get('/logout', [AutentikasiController::class, 'logout'])->name('logout');
+    Route::get('/get_karyawan', [KaryawanController::class, 'getKaryawan'])->name('get_karyawan');
     Route::get('/profile', [AutentikasiController::class, 'uindex']);
     Route::get('/send_mail', [UndanganController::class, 'sendEmail'])->name('send_mail');
 });

@@ -118,4 +118,9 @@ class KaryawanController extends Controller
 
     	return redirect('/karyawan'); 
     }
+
+    public function getKaryawan(){
+        $data = Karyawan::with('rapat')->get();
+        return response()->json($data);
+    }
 }

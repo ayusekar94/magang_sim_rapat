@@ -23,6 +23,6 @@ class Karyawan extends Model
     # Karyawan has many kegiatans
     public function rapat()
     {
-        return $this->hasMany(Kegiatan::class);
+        return $this->hasMany(Rapat::class, 'moderator_nip');
     }
 }
