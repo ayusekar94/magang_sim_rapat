@@ -33,7 +33,7 @@
 
                        <div class="text-center mb-4">
                             <a href="index.html">
-                                <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Activ</span>
+                                <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
                             </a>
                        </div>
 
@@ -41,7 +41,7 @@
                             <div class="card-body p-4"> 
                                 <div class="text-center mt-2">
                                     <h5 class="text-primary">Welcome Back !</h5>
-                                    <p class="text-muted">Sign in to continue to Activ.</p>
+                                    <p class="text-muted">Sign in to continue to MR. Rapat</p>
                                 </div>
                                 <div class="p-2 mt-4">
                                     @if(session()->get('registrasi_success'))
@@ -116,7 +116,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-center text-muted p-4">
-                            <p class="text-white-50">© <script>document.write(new Date().getFullYear())</script> Activ. by Kelompok Magang</p>
+                            <p class="text-white-50">© <script>document.write(new Date().getFullYear())</script> MR. Rapat by Kelompok Magang</p>
                         </div>
                     </div>
                 </div>

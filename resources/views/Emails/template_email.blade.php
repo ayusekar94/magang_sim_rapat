@@ -73,9 +73,6 @@
             <p>Salam,</p>
             <p>Tim Manajemen Rapat</p>
         </div>
-        <div class="footer">
-            <p>Sistem Manajemen Rapat - Hak Cipta &copy; 2023. All rights reserved.</p>
-        </div>
     </div>
 </body>
 </html>

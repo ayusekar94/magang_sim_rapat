@@ -2,7 +2,7 @@
 <html lang="en">
 
     
-<!-- Mirrored from themesdesign.in/Activ-laravel/layouts/pages-starter.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Jul 2022 07:12:08 GMT -->
+<!-- Mirrored from themesdesign.in/MR. Rapat-laravel/layouts/pages-starter.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Jul 2022 07:12:08 GMT -->
 <head>
         
         <meta charset="utf-8" />
@@ -20,8 +20,13 @@
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <!-- gridjs css -->
-        <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
+        {{-- <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css"> --}}
+        
+        <!-- Menggunakan link CDN GridJS -->
+<script src="https://cdn.jsdelivr.net/npm/gridjs@1.6.0/dist/gridjs.production.min.js"></script>
+<script src="https://unpkg.com/gridjs/plugins/selection/dist/selection.umd.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        @include('Rapat.modal_control')
     </head>
 
     <body data-layout="horizontal" data-topbar="dark">
@@ -40,7 +45,7 @@
                                     <img src="assets/images/logo-sm.svg" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Activ</span>
+                                    <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
                                 </span>
                             </a>
 
@@ -49,7 +54,7 @@
                                     <img src="assets/images/logo-sm.svg" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Activ</span>
+                                    <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
                                 </span>
                             </a>
                 
@@ -98,13 +103,13 @@
                             <img src="assets/images/logo-sm.svg" alt="" height="22"> 
                         </span>
                         <span class="logo-lg">
-                            <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Activ</span>
+                            <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
                         </span>
                     </a>
 
                     <a href="index.html" class="logo logo-light">
                         <span class="logo-lg">
-                            <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Activ</span>
+                            <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
                         </span>
                         <span class="logo-sm">
                             <img src="assets/images/logo-sm.svg" alt="" height="22">
@@ -174,7 +179,7 @@
                                     <img src="assets/images/logo-sm.svg" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Activ</span>
+                                    <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
                                 </span>
                             </a>
 
@@ -183,7 +188,7 @@
                                     <img src="assets/images/logo-sm.svg" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Activ</span>
+                                    <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
                                 </span>
                             </a>
                         </div>
@@ -287,7 +292,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> &copy; Activ.
+                                <script>document.write(new Date().getFullYear())</script> &copy; MR. Rapat.
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-end d-none d-sm-block">
@@ -464,5 +469,5 @@
 
     </body>
 
-<!-- Mirrored from themesdesign.in/Activ-laravel/layouts/pages-starter.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Jul 2022 07:12:08 GMT -->
+<!-- Mirrored from themesdesign.in/MR. Rapat-laravel/layouts/pages-starter.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Jul 2022 07:12:08 GMT -->
 </html>

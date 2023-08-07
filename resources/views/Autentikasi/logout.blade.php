@@ -33,7 +33,7 @@
 
                         <div class="text-center mb-4">
                             <a href="index.html">
-                                <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Activ</span>
+                                <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
                             </a>
                        </div>
 
@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="mt-4 pt-2">
                                         <h5>You are Logged Out</h5>
-                                        <p class="text-muted font-size-15">Thank you for using <span class="fw-semibold text-dark">Activ</span></p>
+                                        <p class="text-muted font-size-15">Thank you for using <span class="fw-semibold text-dark">MR> Rapat</span></p>
                                         <div class="mt-4">
                                             <a href="/auth" class="btn btn-primary w-100 waves-effect waves-light">Sign In</a>
                                         </div>
@@ -63,7 +63,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-center text-muted p-4">
-                            <p class="text-white-50">© <script>document.write(new Date().getFullYear())</script> Activ. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                            <p class="text-white-50">© <script>document.write(new Date().getFullYear())</script> MR. Rapat Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
                         </div>
                     </div>
                 </div>

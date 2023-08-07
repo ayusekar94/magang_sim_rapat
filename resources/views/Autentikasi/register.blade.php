@@ -33,7 +33,7 @@
 
                         <div class="text-center mb-4">
                             <a href="index.html">
-                                <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Activ</span>
+                                <img src="assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
                             </a>
                        </div>
 
@@ -41,7 +41,7 @@
                             <div class="card-body p-4"> 
                                 <div class="text-center mt-2">
                                     <h5 class="text-primary">Register Account</h5>
-                                    <p class="text-muted">Get your free Activ account now.</p>
+                                    <p class="text-muted">Get your free MR. Rapat account now.</p>
                                 </div>
                                 <div class="p-2 mt-4">
                                     <form action="/register" method="POST">@csrf
@@ -60,6 +60,16 @@
                                             <label class="form-label" for="username">Nama Lengkap</label>
                                             <input type="text" class="form-control" name="nama" placeholder="Enter Full Name">
                                             @error('nama')
+                                            <code>
+                                                {{ $message }}
+                                            </code>
+                                            @enderror
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label" for="username">Email</label>
+                                            <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                                            @error('email')
                                             <code>
                                                 {{ $message }}
                                             </code>
