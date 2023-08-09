@@ -141,33 +141,35 @@
 												<div class="row mb-4">
 													<button type="button" class="btn btn-primary waves-effect waves-light" id="tambahMateri">Tambah Materi Baru</button>
 												</div>
-												<div class="row mt-2 formMateriRapat" style="display: none; ">
+												<div id="formMateriRapat" style="display: none; ">
+												<div class="row mt-2">
 													<div class="col-lg-6">
 														<div class="mb-3">
 															<label for="basicpill-namecard-input" class="form-label">Judul Materi</label>
-															<input type="text" class="form-control" placeholder="Masukkan Judul Materi" id="basicpill-namecard-input">
+															<input type="text" class="form-control" placeholder="Masukkan Judul Materi" name="judul_materi[]">
 														</div>
 													</div>
 													<!-- end col -->
 													<div class="col-lg-6">
 														<div class="mb-3">
 															<label for="basicpill-cardno-input" class="form-label">File Materi</label>
-															<input type="file" class="form-control" placeholder="Enter Credit Card Number" id="basicpill-cardno-input">
+															<input type="file" class="form-control" placeholder="Enter Credit Card Number" id="basicpill-cardno-input" name="file_materi[]">
 														</div>
 													</div>
 													<!-- end col -->
 												</div>
 												<!-- end row -->
-												<div class="row formMateriRapat" style="display: none; ">
+												<div class="row">
 													<div class="col-lg-12">
 														<div class="mb-3">
 															<label for="basicpill-address-input" class="form-label">Deskripsi</label>
-															<textarea id="basicpill-address-input" class="form-control" placeholder="Masukkan Deskripsi" rows="2"></textarea>
+															<textarea id="basicpill-address-input" class="form-control" placeholder="Masukkan Deskripsi" rows="2" name="deskripsi[]"></textarea>
 														</div>
 													</div>
 													<!-- end col -->
 												</div>
 												<!-- end row -->
+												</div>
 											</div>
 											<!-- end form -->
 										</div>
@@ -185,7 +187,7 @@
 													</div>
 												</div>
 											</div>
-											<div class="row mt-4">
+											<div class="row mt-4" id="jadwal" style="display: none;">
 												<div class="col-lg-12">
 													<div class="mb-3">
 														<label for="basicpill-cardno-input" class="form-label">Jadwalkan Pengiriman</label>
