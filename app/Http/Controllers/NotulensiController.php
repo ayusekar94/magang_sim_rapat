@@ -15,7 +15,8 @@ class NotulensiController extends Controller
     public function index()
     {
         return view('Notulensi.notulensi',[
-            'judul' => 'Notulensi'
+            'judul' => 'Notulensi',
+            'notulensi' => Notulensi::get(),
         ]);
     }
 
