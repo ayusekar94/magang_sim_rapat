@@ -20,11 +20,8 @@
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <!-- gridjs css -->
-        {{-- <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css"> --}}
+        <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
         
-        <!-- Menggunakan link CDN GridJS -->
-<script src="https://cdn.jsdelivr.net/npm/gridjs@1.6.0/dist/gridjs.production.min.js"></script>
-<script src="https://unpkg.com/gridjs/plugins/selection/dist/selection.umd.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         @include('Rapat.modal_control')
     </head>
@@ -460,7 +457,7 @@
         <!-- gridjs js -->
         <script src="assets/libs/gridjs/gridjs.umd.js"></script>
         {{-- <script src="assets/js/rapat/rapat.init.js"></script> --}}
-        <script src="assets/js/karyawan/karyawan.init.js"></script>
+        {{-- <script src="assets/js/karyawan/karyawan.init.js"></script> --}}
         <script src="assets/js/materi/materi.init.js"></script>
         <script src="assets/js/notulensi/notulensi.init.js"></script>
 
