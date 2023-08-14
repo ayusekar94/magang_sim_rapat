@@ -23,7 +23,8 @@ class UndanganController extends Controller
 
     public function index(){
         return view('Emails.undangan',[
-            'judul' => 'Dashboard'
+            'judul' => 'Dashboard',
+            'undangan' => Undangan::get()
         ]);
     }
 
@@ -50,7 +51,7 @@ class UndanganController extends Controller
         $image->move('uploads/kegiatan/' ,$new_image);
         // dd($request->image);
         $validatedData['image'] = 'uploads/kegiatan/'.$new_image;
-        Kegiatan::create($validatedData); //untuk menyimpan data
+        Undangan::create($validatedData); //untuk menyimpan data
         // $kegiatan = new Kegiatan();
         // $kegiatan->image = 'uploads/kegiatan/'.$new_image;
         // $kegiatan->name= $request->name;

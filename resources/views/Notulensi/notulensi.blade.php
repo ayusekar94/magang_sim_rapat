@@ -130,5 +130,7 @@
 </div>
 
 {{-- MODAL  --}}
-{{-- @include('Materi.modal_edit') --}}
+@include('Notulensi.modal_add')
+@include('Notulensi.modal_edit')
+
 @endsection

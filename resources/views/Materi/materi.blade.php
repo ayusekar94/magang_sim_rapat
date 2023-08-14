@@ -54,8 +54,8 @@
                     <table class="table align-middle table-nowrap table-check">
                         <thead>
                             <tr class="bg-transparent">
-                                <th>Nama Rapat</th>
-                                <th>Materi</th>
+                                <th>Nomer</th>
+                                <th>Nama Materi</th>
                                 <th>Deskripsi</th>
                                 <th>File</th>
                                 <th style="width: 120px;">Action</th>
@@ -132,6 +132,7 @@
 </div>
 
 {{-- MODAL  --}}
-{{-- @include('Materi.modal_edit') --}}
+@include('Materi.modal_add')
+@include('Materi.modal_edit')
 
 @endsection
