@@ -134,6 +134,12 @@
                             </li>
                             <li class="menu-title" data-key="t-pages">Applications</li>
                             <li>
+                                <a href="/akun">
+                                    <i class="bx bx-user icon nav-icon"></i>
+                                    <span class="menu-item" data-key="t-akun">Akun</span>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="/rapat">
                                     <i class="bx bx-file icon nav-icon"></i>
                                     <span class="menu-item" data-key="t-rapat">Rapat</span>
@@ -204,6 +210,13 @@
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class='bx bx-tachometer'></i>
                                                 <span data-key="t-dashboards">Dashbord</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" {{ (session()->get('divisi') == 'Administrator')?'style=display:block':'style=display:none' }}>
+                                            <a class="nav-link dropdown-toggle arrow-none" href="/akun" id="topnav-rapat" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class='bx bx-user icon nav-icon'></i>
+                                                <span data-key="t-rapat">Akun</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">

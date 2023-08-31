@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="mt-4 pt-2">
                                         <h5>You are Logged Out</h5>
-                                        <p class="text-muted font-size-15">Thank you for using <span class="fw-semibold text-dark">MR> Rapat</span></p>
+                                        <p class="text-muted font-size-15">Thank you for using <span class="fw-semibold text-dark">MR. Rapat</span></p>
                                         <div class="mt-4">
                                             <a href="/auth" class="btn btn-primary w-100 waves-effect waves-light">Sign In</a>
                                         </div>

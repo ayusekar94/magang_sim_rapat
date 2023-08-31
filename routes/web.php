@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AutentikasiController;
+use App\Http\Controllers\AkunController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UndanganController;
 use App\Http\Controllers\RapatController;
@@ -30,6 +31,7 @@ Route::get('/logout-page', [AutentikasiController::class, 'logoutPage'])->name('
 
 Route::group(['middleware' => 'login'], function () {
     Route::resource('/dashboard', DashboardController::class);
+    Route::resource('/akun', AkunController::class);
     Route::resource('/rapat', RapatController::class);
     Route::resource('/undangan', UndanganController::class);
     Route::resource('/absensi', AbsenController::class);

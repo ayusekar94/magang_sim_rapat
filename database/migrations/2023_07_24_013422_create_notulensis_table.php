@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('notulensis', function (Blueprint $table) {
+        Schema::create('risalah', function (Blueprint $table) {
             $table->id();
-            $table->text('isi_notulensi');
-            $table->text('tindak_lanjut');
-            $table->text('catatan_penting');
+            $table->text('file');
+            $table->text('catatan');
             $table->timestamps();
 
             # Relasi

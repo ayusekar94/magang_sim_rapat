@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('undangans', function (Blueprint $table) {
             $table->id();
-            $table->string('email_penerima');
-            $table->string('status_undangan');
             $table->date('waktu_pengiriman');
             $table->timestamps();
 
             # Relasi
             $table->unsignedBigInteger('rapat_id');
             $table->foreign('rapat_id')->references('id')->on('rapats')->onDelete('cascade');
+            $table->unsignedBigInteger('divisi_id');
+            $table->foreign('divisi_id')->references('id')->on('rapats')->onDelete('cascade');
         });
     }
 
