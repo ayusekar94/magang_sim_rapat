@@ -116,7 +116,9 @@
 												<div class="col-12">
 													<div class="card">
 														<div class="card-body">
-															<div id="table-karyawan"></div>
+															<div id="table-anggota">
+																
+															</div>
 														</div>
 													</div>
 												</div>
