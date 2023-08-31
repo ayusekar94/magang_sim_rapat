@@ -13,16 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('karyawans', function (Blueprint $table) {
-            $table->id('NIP');
-            $table->string('nama');
-            $table->string('email');
-            $table->string('jabatan');
+        Schema::create('divisis', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_divisi');
             $table->timestamps();
-            
-            # Relasi
-            $table->unsignedBigInteger('divisi_id');
-            $table->foreign('divisi_id')->references('id')->on('divisis')->onDelete('cascade');
         });
     }
 
@@ -33,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('karyawans');
+        Schema::dropIfExists('divisis');
     }
 };

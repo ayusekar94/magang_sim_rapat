@@ -24,27 +24,24 @@ class AutentikasiController extends Controller
         ]);
     }
 
-    // Auth
+    // Auth : Menggunakan username dan password
     public function store(Request $request){
         $validatedData=$request->validate([
-            'NIP' => 'required',
+            'username' => 'required',
             'password' => 'required'
         ]);
 
         //jika username ada
-        $user = DB::table('karyawans')->where('NIP', $request->NIP)->first();
+        $user = DB::table('akuns')->where('username', $request->username)->first();
 
         //jika password benar
         if($user){
             if(Hash::check($request->password,$user->password)){
                 session([
                     'isLogin' => true,
-                    'NIP' => $user->NIP,
-                    'nama' => $user->nama,
-                    'divisi' => $user->divisi,
-                    'jabatan' => $user->jabatan,
-                    'departemen' => $user->departemen
-                    ]);
+                    'username' => $user->username,
+                    'divisi' => DB::table('divisis')->where('id', $user->divisi_id)->value('nama_divisi'),
+                ]);
                 // return redirect('/'.$request->role);
                 return redirect('/dashboard');
             }

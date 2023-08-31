@@ -75,9 +75,9 @@
                                     <form method="POST" action="/auth"> @csrf
         
                                         <div class="mb-3">
-                                            <label class="form-label" for="username">NIP</label>
-                                            <input type="text" class="form-control" name="NIP" placeholder="Enter username">
-                                            @error('NIP')
+                                            <label class="form-label" for="username">Username</label>
+                                            <input type="text" class="form-control" name="username" placeholder="Enter username">
+                                            @error('username')
                                             <code>
                                                 {{ $message }}
                                             </code>
