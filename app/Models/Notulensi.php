@@ -10,13 +10,12 @@ class Notulensi extends Model
     use HasFactory;
 
     protected $fillable = [
-        'isi_notulensi',
-        'tindak_lanjut',
-        'catatan_pentingp',
+        'file',
+        'catatan',
         'rapat_id'
     ];
 
-    protected $table = 'notulensis';
+    protected $table = 'risalah';
 
     public function rapat()
     {

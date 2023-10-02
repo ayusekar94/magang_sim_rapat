@@ -54,9 +54,9 @@
                     <table class="table align-middle table-nowrap table-check">
                         <thead>
                             <tr class="bg-transparent">
-                                <th>Notulensi</th>
-                                <th>Lanjutan</th>
+                                <th>Jenis Rapat</th>
                                 <th>Catatan</th>
+                                <th>File</th>
                                 <th style="width: 120px;">Action</th>
                             </tr>
                         </thead>
@@ -64,9 +64,9 @@
                             @foreach ($notulensi as $item)
                                 <tr>
                                     {{-- <td><a href="invoices-detail.html" class="text-dark fw-medium">{{ $item->id }}</a> </td> --}}
-                                    <td>{{ $item->isi_notulensi }}
-                                    <td>{{ $item->tindak_lanjut }}</td>
-                                    <td>{{ $item->catatan_penting }}</td>
+                                    <td>{{ $item->rapat->judul}}
+                                    <td>{{ $item->catatan }}</td>
+                                    <td>{{ $item->file }}</td>
                                     </td>
                                     
                                     <td>

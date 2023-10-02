@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Notulensi;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class NotulensiController extends Controller
 {
@@ -16,7 +19,7 @@ class NotulensiController extends Controller
     {
         return view('Notulensi.notulensi',[
             'judul' => 'Notulensi',
-            'notulensi' => Notulensi::get(),
+            'notulensi' => Notulensi::with('rapat')->get(),
         ]);
     }
 
@@ -38,19 +41,23 @@ class NotulensiController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'isi_notulensi' => 'required',
-            'tindak_lanjut' => 'required',
-            'catatan_penting' => 'required',
+        // dd($request);
+        $validatedData=$request->validate([
+            'catatan' => 'required',
+            'file' => 'required|file|mimes:pdf,word,exel'
         ]);
 
-        Notulensi::create([
-            'isi_notulensi' => $validated['isi_notulensi'],
-            'catatan_penting' => $validated['catatan_penting'],
-            'tindak_lanjut' => $validated['tindak_lanjut']
-        ]);
+        //upload file 
+        $file = $request->file; 
+        $slug = ($file->getClientOriginalName());
+        $new_file = time() .'_'. $slug.'.' . $file->getClientOriginalExtension();
+        $file->move('uploads/notulensi/' ,$new_file);
+        // dd($request->file);
+        $validatedData['file'] = 'uploads/notulensi/'.$new_file;
 
-        return redirect('/notulensi');
+        Notulensi::create($validatedData);
+
+        return redirect('/notulensi')->with('success','Data baru telah ditambahkan!');
     }
 
     /**
@@ -84,14 +91,35 @@ class NotulensiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $notulensi = Notulensi::where('id', session('NIP'))->first();
-        $notulensi->isi_notulensi = $request->isi_notulensi;
-        $notulensi->tindak_lanjut = $request->tindak_lanjut;
-        $notulensi->catatan_penting = $request->catatan_penting;
+        $validatedData=$request->validate([
+            'catatan_edit' => 'required',
+        ]);
 
-    	$notulensi->update();
+        $notulensis= Notulensi::find($id);
 
-        return redirect('/notulensi');
+        if($request->hasFile('file-edit')){
+            $request->validate([
+                'file-edit' => 'required|file|mimes:pdf,word,exel'
+            ]);
+
+            // Detele gbr lama
+            if(File::exists($notulensis->file)) {
+                File::delete($notulensis->file);
+            }
+        
+            $file = $request->file('file-edit');
+            $slug = Str::slug($file->getClientOriginalName());
+            $new_file = time() .'_'. $slug.'.' . $file->getClientOriginalExtension();;
+            $file->move('uploads/notulensi/', $new_file);
+            $notulensis->file = 'uploads/notulensi/'.$new_file;
+            // dd($notulensi->file);
+        }
+
+        
+        $notulensis->catatan= $validatedData['catatan-edit'];
+        $notulensis->save();
+
+        return redirect('/notulensi')->with('success','Data telah ditambahkan!');
     }
 
     /**
@@ -102,6 +130,12 @@ class NotulensiController extends Controller
      */
     public function destroy($id)
     {
+        $notulensis= Notulensi::find($id);
+        $file_path =$notulensis->file;  // Value is not URL but directory file paths
+        if(File::exists($file_path)) {
+            File::delete($file_path);
+        }
+        
         Notulensi::destroy($id);
 
     	return redirect('/notulensi'); 

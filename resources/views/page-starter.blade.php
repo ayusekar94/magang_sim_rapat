@@ -21,7 +21,9 @@
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <!-- gridjs css -->
         <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
-        
+        <!-- Trix -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/trix.css') }}">
+        <script type="text/javascript" src="{{ asset('js/trix.js') }}"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         @include('Rapat.modal_control')
     </head>
