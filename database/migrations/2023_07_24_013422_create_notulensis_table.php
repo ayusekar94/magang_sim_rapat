@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('risalah', function (Blueprint $table) {
             $table->id();
-            $table->text('file');
+            $table->string('file');
             $table->text('catatan');
             $table->timestamps();
 

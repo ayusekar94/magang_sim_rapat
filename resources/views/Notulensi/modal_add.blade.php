@@ -12,7 +12,7 @@
 						<div class="card">
 							<!-- end card header -->
 							<div class="card-body">
-								<form action="/rapat" method="post" enctype="multipart/form-data"> @csrf 
+								<form action="/notulensi" method="post" enctype="multipart/form-data"> @csrf 
 									<ul class="wizard-nav mb-5">
 										<li class="wizard-list-item">
 											<div class="list-item">
@@ -33,14 +33,42 @@
 												<div class="col-lg-6">
 													<div class="mb-3">
 														<label for="basicpill-firstname-input" class="form-label">Nama Rapat</label>
-														<input type="text" class="form-control" placeholder="Masukkan Nama Rapat" id="basicpill-firstname-input" name="nama_rapat">
+														<select class="form-select @error('rapat_id') is-invalid @enderror" aria-label="Default select example" name="rapat_id">
+														@foreach ($notulensi as $item)
+															<option value="{{ $item->id }}">{{ $item->id }} - {{ $item->rapat->judul }}</option>
+														@endforeach
+														</select>
+														@error('rapat_id')
+															<div class="invalid-feedback">
+																Pilih salah satu kategori
+															</div>
+														@enderror
+														{{-- <input type="text" class="form-control" placeholder="Masukkan Nama Rapat" id="basicpill-firstname-input" name="nama_rapat"> --}}
 													</div>
 												</div>
 												<!-- end col -->
 												<div class="col-lg-6">
 													<label for="file" class="from-label">File</label>
-                                                    <img class="img-preview img-fluid mb-3 col-sm-3">
-                                                    <input type="file" class="form-control"  id="file" name="file" required > 
+													{{-- <div class="col-sm-12">
+														<input type="file" name="image" class="form-control" id="formFile"
+														accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+														  @error('image')
+															<div class="alert alert-danger mt-2">
+																{{ $message }}
+															</div>
+														  @enderror 
+													  </div> --}}
+													<div class="col-sm-12">
+														<input type="file" name="file" class="form-control" id="formFile"
+														accept="file/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+														  @error('file')
+															<div class="alert alert-danger mt-2">
+																{{ $message }}
+															</div>
+														  @enderror 
+													  </div>
+                                                    {{-- <img class="img-preview img-fluid mb-3 col-sm-3">
+                                                    <input type="file" class="form-control"  id="file" name="file" required >  --}}
 												</div>
 												<!-- end col -->
 											</div>
@@ -49,7 +77,7 @@
 												<div class="col-lg-12">
 													<div class="mb-3">
 														<label for="basicpill-address-input" class="form-label">Catatan Tambahan</label>
-														<textarea id="basicpill-address-input" class="form-control" placeholder="Masukkan Catatan" rows="2" name="deskripsi"></textarea>
+														<textarea id="basicpill-address-input" class="form-control" placeholder="Masukkan Catatan" rows="2" name="catatan"></textarea>
 													</div>
 												</div>
 												<!-- end col -->

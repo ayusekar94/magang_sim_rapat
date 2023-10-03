@@ -22,10 +22,11 @@
         <!-- gridjs css -->
         <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
         <!-- Trix -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/trix.css') }}">
-        <script type="text/javascript" src="{{ asset('js/trix.js') }}"></script>
+        {{-- <link rel="stylesheet" type="text/css" href="{{ asset('css/trix.css') }}">
+        <script type="text/javascript" src="{{ asset('js/trix.js') }}"></script> --}}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         @include('Rapat.modal_control')
+        @include('Notulensi.modal_control')
     </head>
 
     <body data-layout="horizontal" data-topbar="dark">
@@ -164,8 +165,8 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="/undangan" data-key="t-undangan">Undangan</a></li>
-                                    <li><a href="/materi" data-key="t-materi">Materi</a></li>
-                                    <li><a href="/notulen" data-key="t-notulen">Notulensi</a></li>
+                                    {{-- <li><a href="/materi" data-key="t-materi">Materi</a></li> --}}
+                                    <li><a href="/notulensi" data-key="t-notulen">Notulensi</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -246,7 +247,7 @@
                                             <div class="dropdown-menu" aria-labelledby="topnav-pages">
     
                                                 <a href="/undangan" class="dropdown-item" data-key="t-undangan">Undangan</a>
-                                                <a href="/materi" class="dropdown-item" data-key="t-materi">Materi</a>
+                                                {{-- <a href="/materi" class="dropdown-item" data-key="t-materi">Materi</a> --}}
                                                 <a href="/notulensi" class="dropdown-item" data-key="t-notulen">Notulensi</a>
                                             </div>
                                         </li>

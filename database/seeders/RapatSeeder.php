@@ -14,25 +14,23 @@ class RapatSeeder extends Seeder
     public function run(): void
     {
         Rapat::create([
-            'nama_rapat' => 'Rapat Proyek X',
+            'divisi_id' => '1',
+            'judul' => 'Rapat Proyek X',
             'tanggal' => '2023-07-25',
             'waktu_mulai' => '09:00:00',
             'waktu_selesai' => '11:00:00',
             'deskripsi' => 'Rapat pembahasan proyek X dengan tim pengembang.',
-            'ruangan' => 'Ruangan A',
-            'status' => 'terjadwal',
-            'moderator_nip' => '182930485766',
+            'tempat' => 'Ruangan A',
         ]);
 
         Rapat::create([
-            'nama_rapat' => 'Rapat Departemen Y',
+            'divisi_id' => '2',
+            'judul' => 'Rapat Departemen Y',
             'tanggal' => '2023-07-26',
             'waktu_mulai' => '14:00:00',
             'waktu_selesai' => '16:00:00',
             'deskripsi' => 'Rapat koordinasi departemen Y.',
-            'ruangan' => 'Ruangan B',
-            'status' => 'terjadwal',
-            'moderator_nip' => '182930485766',
+            'tempat' => 'Ruangan B',
         ]);
     }
 }

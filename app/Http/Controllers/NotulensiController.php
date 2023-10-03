@@ -44,17 +44,18 @@ class NotulensiController extends Controller
         // dd($request);
         $validatedData=$request->validate([
             'catatan' => 'required',
-            'file' => 'required|file|mimes:pdf,word,exel'
+            'file' => 'required|file|mimes:pdf,word,exel|max:5120',
+            'rapat_id' => 'required'
         ]);
 
-        //upload file 
+        //upload file  
         $file = $request->file; 
         $slug = ($file->getClientOriginalName());
         $new_file = time() .'_'. $slug.'.' . $file->getClientOriginalExtension();
         $file->move('uploads/notulensi/' ,$new_file);
         // dd($request->file);
         $validatedData['file'] = 'uploads/notulensi/'.$new_file;
-
+        // dd($validatedData);
         Notulensi::create($validatedData);
 
         return redirect('/notulensi')->with('success','Data baru telah ditambahkan!');
@@ -95,29 +96,46 @@ class NotulensiController extends Controller
             'catatan_edit' => 'required',
         ]);
 
-        $notulensis= Notulensi::find($id);
+        $risalah= Notulensi::find($id);
 
+        // if($request->hasFile('image-edit')){
+        //     $request->validate([
+        //         'image-edit' => 'required|image|mimes:pdf,word,exel|max:5120'
+        //     ]);
+
+        //     // Detele gbr lama
+        //     if(File::exists($risalah->image)) {
+        //         File::delete($risalah->image);
+        //     }
+        
+        //     $image = $request->file('image-edit');
+        //     $slug = Str::slug($image->getClientOriginalName());
+        //     $new_image = time() .'_'. $slug.'.' . $image->getClientOriginalExtension();;
+        //     $image->move('uploads/notulen/', $new_image);
+        //     $risalah->image = 'uploads/notulen/'.$new_image;
+        //     // dd($kegiatan->image);
+        // }
         if($request->hasFile('file-edit')){
             $request->validate([
-                'file-edit' => 'required|file|mimes:pdf,word,exel'
+                'file-edit' => 'required|file|mimes:pdf,word,exel|max:5120'
             ]);
 
             // Detele gbr lama
-            if(File::exists($notulensis->file)) {
-                File::delete($notulensis->file);
+            if(File::exists($risalah->file)) {
+                File::delete($risalah->file);
             }
         
             $file = $request->file('file-edit');
             $slug = Str::slug($file->getClientOriginalName());
             $new_file = time() .'_'. $slug.'.' . $file->getClientOriginalExtension();;
             $file->move('uploads/notulensi/', $new_file);
-            $notulensis->file = 'uploads/notulensi/'.$new_file;
+            $risalah->file = 'uploads/notulensi/'.$new_file;
             // dd($notulensi->file);
         }
 
         
-        $notulensis->catatan= $validatedData['catatan-edit'];
-        $notulensis->save();
+        $risalah->catatan= $validatedData['catatan-edit'];
+        $risalah->save();
 
         return redirect('/notulensi')->with('success','Data telah ditambahkan!');
     }
